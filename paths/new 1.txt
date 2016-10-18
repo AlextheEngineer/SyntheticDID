@@ -1,0 +1,1 @@
+#This file clears all the images in data/outputs, data/blank_bgs and data/ground_truths
