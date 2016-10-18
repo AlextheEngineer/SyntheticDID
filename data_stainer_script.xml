@@ -1,0 +1,22 @@
+<root>
+  <alias id="INPUT" value="test/degraded_bg2.png"/>
+  <image id="my-image">
+    <load file="INPUT"/>
+  </image>
+  <image id="my-copy">
+    <copy ref="my-image"/>
+  </image>
+  <gradient-degradations ref="my-copy">
+    <strength>0.1</strength>
+    <density>2.5</density>
+    <iterations>750</iterations>
+    <source>data/stains/spots/</source>
+  </gradient-degradations>
+  <gradient-degradations ref="my-copy">
+    <strength>0.1</strength>
+    <density>2.5</density>
+    <iterations>750</iterations>
+    <source>data/stains/surfaces/</source>
+  </gradient-degradations>
+  <save ref="my-copy" file="test/degraded_bg2_stained_combo_0_1__2_5.png"/>
+</root>

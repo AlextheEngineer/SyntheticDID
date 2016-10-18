@@ -1,0 +1,2 @@
+data/input_words/inputs_words1/
+data/input_words/inputs_words2/
