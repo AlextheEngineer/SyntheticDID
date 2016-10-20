@@ -1,5 +1,5 @@
 <root>
-  <alias id="INPUT" value="data/input_bgs/inputs_bg1/bg4.png"/>
+  <alias id="INPUT" value="data/input_bgs/inputs_bg2/bg6.png"/>
   <image id="my-image">
     <load file="INPUT"/>
   </image>
@@ -8,507 +8,189 @@
   </image>
   <manual-gradient-degradations ref="my-copy">
     <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
+      <file>data/transformed_words/inputs_words1/text2_shear_v.png</file>
       <strength>1</strength>
       <x>10</x>
       <y>10</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
+      <file>data/transformed_words/inputs_words2/text4_blur_edges.png</file>
+      <strength>1</strength>
+      <x>162</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_color_jitter.png</file>
+      <strength>1</strength>
+      <x>348</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_blur_edges.png</file>
+      <strength>1</strength>
+      <x>589</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_color_jitter.png</file>
       <strength>1</strength>
       <x>10</x>
-      <y>151</y>
+      <y>120</y>
     </degradation>
-    <multi-core/>
-    <iterations>500</iterations>
-  </manual-gradient-degradations>
-  <gradient-degradations ref="my-copy">
-    <strength>0.32</strength>
-    <density>4.87</density>
-    <iterations>750</iterations>
-    <source>data/stains/spots/</source>
-  </gradient-degradations>
-  <gradient-degradations ref="my-copy">
-    <strength>0.80</strength>
-    <density>0.40</density>
-    <iterations>750</iterations>
-    <source>data/stains/surfaces/</source>
-  </gradient-degradations>
-  <save ref="my-copy" file="data/outputs/degraded_bg4.png"/>
-  <alias id="INPUT" value="data/input_bgs/inputs_bg1/bg1.png"/>
-  <image id="my-image">
-    <load file="INPUT"/>
-  </image>
-  <image id="my-copy">
-    <copy ref="my-image"/>
-  </image>
-  <manual-gradient-degradations ref="my-copy">
     <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
+      <file>data/transformed_words/inputs_words2/text6_shear_v.png</file>
       <strength>1</strength>
-      <x>10</x>
-      <y>10</y>
+      <x>350</x>
+      <y>120</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
+      <file>data/transformed_words/inputs_words1/text2_shear_h.png</file>
       <strength>1</strength>
-      <x>231</x>
-      <y>10</y>
+      <x>513</x>
+      <y>120</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
-      <strength>1</strength>
-      <x>399</x>
-      <y>10</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
-      <strength>1</strength>
-      <x>10</x>
-      <y>118</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>176</x>
-      <y>118</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
-      <strength>1</strength>
-      <x>344</x>
-      <y>118</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
-      <strength>1</strength>
-      <x>10</x>
-      <y>230</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
-      <strength>1</strength>
-      <x>231</x>
-      <y>230</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
-      <strength>1</strength>
-      <x>392</x>
-      <y>230</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
-      <strength>1</strength>
-      <x>10</x>
-      <y>342</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
-      <strength>1</strength>
-      <x>231</x>
-      <y>342</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
-      <strength>1</strength>
-      <x>389</x>
-      <y>342</y>
-    </degradation>
-    <multi-core/>
-    <iterations>500</iterations>
-  </manual-gradient-degradations>
-  <gradient-degradations ref="my-copy">
-    <strength>0.19</strength>
-    <density>1.08</density>
-    <iterations>750</iterations>
-    <source>data/stains/spots/</source>
-  </gradient-degradations>
-  <gradient-degradations ref="my-copy">
-    <strength>0.76</strength>
-    <density>0.18</density>
-    <iterations>750</iterations>
-    <source>data/stains/surfaces/</source>
-  </gradient-degradations>
-  <save ref="my-copy" file="data/outputs/degraded_bg1.png"/>
-  <alias id="INPUT" value="data/input_bgs/inputs_bg1/bg2.png"/>
-  <image id="my-image">
-    <load file="INPUT"/>
-  </image>
-  <image id="my-copy">
-    <copy ref="my-image"/>
-  </image>
-  <manual-gradient-degradations ref="my-copy">
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
-      <strength>1</strength>
-      <x>10</x>
-      <y>10</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
-      <strength>1</strength>
-      <x>171</x>
-      <y>10</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
-      <strength>1</strength>
-      <x>337</x>
-      <y>10</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>558</x>
-      <y>10</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
-      <strength>1</strength>
-      <x>726</x>
-      <y>10</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
-      <strength>1</strength>
-      <x>884</x>
-      <y>10</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>1050</x>
-      <y>10</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
-      <strength>1</strength>
-      <x>1218</x>
-      <y>10</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
-      <strength>1</strength>
-      <x>10</x>
-      <y>151</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
-      <strength>1</strength>
-      <x>330</x>
-      <y>151</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
-      <strength>1</strength>
-      <x>650</x>
-      <y>151</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
-      <strength>1</strength>
-      <x>811</x>
-      <y>151</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>969</x>
-      <y>151</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
-      <strength>1</strength>
-      <x>1137</x>
-      <y>151</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
-      <strength>1</strength>
-      <x>1298</x>
-      <y>151</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
-      <strength>1</strength>
-      <x>10</x>
-      <y>241</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
-      <strength>1</strength>
-      <x>231</x>
-      <y>241</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
-      <strength>1</strength>
-      <x>551</x>
-      <y>241</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>717</x>
-      <y>241</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
-      <strength>1</strength>
-      <x>885</x>
-      <y>241</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
-      <strength>1</strength>
-      <x>1205</x>
-      <y>241</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
-      <strength>1</strength>
-      <x>1363</x>
-      <y>241</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
-      <strength>1</strength>
-      <x>10</x>
-      <y>349</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
-      <strength>1</strength>
-      <x>330</x>
-      <y>349</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>551</x>
-      <y>349</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
-      <strength>1</strength>
-      <x>719</x>
-      <y>349</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
-      <strength>1</strength>
-      <x>940</x>
-      <y>349</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
-      <strength>1</strength>
-      <x>1106</x>
-      <y>349</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
-      <strength>1</strength>
-      <x>1272</x>
-      <y>349</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
-      <strength>1</strength>
-      <x>10</x>
-      <y>457</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>330</x>
-      <y>457</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
-      <strength>1</strength>
-      <x>498</x>
-      <y>457</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
+      <file>data/transformed_words/inputs_words2/text6_shear_h.png</file>
       <strength>1</strength>
       <x>664</x>
-      <y>457</y>
+      <y>120</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
-      <strength>1</strength>
-      <x>885</x>
-      <y>457</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
-      <strength>1</strength>
-      <x>1043</x>
-      <y>457</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>1201</x>
-      <y>457</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
-      <strength>1</strength>
-      <x>1369</x>
-      <y>457</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
+      <file>data/transformed_words/inputs_words1/text1_color_jitter.png</file>
       <strength>1</strength>
       <x>10</x>
-      <y>565</y>
+      <y>231</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
+      <file>data/transformed_words/inputs_words2/text4_shear_v.png</file>
       <strength>1</strength>
-      <x>231</x>
-      <y>565</y>
+      <x>350</x>
+      <y>231</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
+      <file>data/transformed_words/inputs_words2/text6_shear_h.png</file>
       <strength>1</strength>
-      <x>392</x>
-      <y>565</y>
+      <x>514</x>
+      <y>231</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
+      <file>data/transformed_words/inputs_words1/text2_color_jitter.png</file>
       <strength>1</strength>
-      <x>613</x>
-      <y>565</y>
+      <x>679</x>
+      <y>231</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
-      <strength>1</strength>
-      <x>779</x>
-      <y>565</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>940</x>
-      <y>565</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>1108</x>
-      <y>565</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>1276</x>
-      <y>565</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
+      <file>data/transformed_words/inputs_words2/text5_rotate.png</file>
       <strength>1</strength>
       <x>10</x>
-      <y>657</y>
+      <y>349</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
+      <file>data/transformed_words/inputs_words2/text5_shear_v.png</file>
       <strength>1</strength>
-      <x>231</x>
-      <y>657</y>
+      <x>166</x>
+      <y>349</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
+      <file>data/transformed_words/inputs_words2/text6_elastic.png</file>
       <strength>1</strength>
-      <x>397</x>
-      <y>657</y>
+      <x>322</x>
+      <y>349</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
+      <file>data/transformed_words/inputs_words1/text1_original.png</file>
       <strength>1</strength>
-      <x>618</x>
-      <y>657</y>
+      <x>510</x>
+      <y>349</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
-      <strength>1</strength>
-      <x>938</x>
-      <y>657</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
-      <strength>1</strength>
-      <x>1159</x>
-      <y>657</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>1380</x>
-      <y>657</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
+      <file>data/transformed_words/inputs_words1/text3_color_jitter.png</file>
       <strength>1</strength>
       <x>10</x>
-      <y>769</y>
+      <y>447</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
+      <file>data/transformed_words/inputs_words2/text4_color_jitter.png</file>
       <strength>1</strength>
-      <x>171</x>
-      <y>769</y>
+      <x>251</x>
+      <y>447</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
+      <file>data/transformed_words/inputs_words1/text3_color_jitter.png</file>
       <strength>1</strength>
-      <x>491</x>
-      <y>769</y>
+      <x>437</x>
+      <y>447</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
+      <file>data/transformed_words/inputs_words1/text2_color_jitter.png</file>
       <strength>1</strength>
-      <x>811</x>
-      <y>769</y>
+      <x>678</x>
+      <y>447</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
+      <file>data/transformed_words/inputs_words2/text4_blur_edges.png</file>
       <strength>1</strength>
-      <x>977</x>
-      <y>769</y>
+      <x>10</x>
+      <y>581</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
+      <file>data/transformed_words/inputs_words2/text5_elastic.png</file>
       <strength>1</strength>
-      <x>1135</x>
-      <y>769</y>
+      <x>196</x>
+      <y>581</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
+      <file>data/transformed_words/inputs_words2/text5_rotate.png</file>
       <strength>1</strength>
-      <x>1303</x>
-      <y>769</y>
+      <x>374</x>
+      <y>581</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_blur_edges.png</file>
+      <strength>1</strength>
+      <x>530</x>
+      <y>581</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_blur_edges.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>700</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_color_jitter.png</file>
+      <strength>1</strength>
+      <x>198</x>
+      <y>700</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_color_jitter.png</file>
+      <strength>1</strength>
+      <x>376</x>
+      <y>700</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_blur_edges.png</file>
+      <strength>1</strength>
+      <x>564</x>
+      <y>700</y>
     </degradation>
     <multi-core/>
     <iterations>500</iterations>
   </manual-gradient-degradations>
   <gradient-degradations ref="my-copy">
-    <strength>0.11</strength>
-    <density>0.37</density>
+    <strength>0.16</strength>
+    <density>0.99</density>
     <iterations>750</iterations>
     <source>data/stains/spots/</source>
   </gradient-degradations>
   <gradient-degradations ref="my-copy">
-    <strength>0.59</strength>
-    <density>4.30</density>
+    <strength>0.13</strength>
+    <density>1.54</density>
     <iterations>750</iterations>
     <source>data/stains/surfaces/</source>
   </gradient-degradations>
-  <save ref="my-copy" file="data/outputs/degraded_bg2.png"/>
+  <save ref="my-copy" file="data/outputs/degraded_0_bg6.png"/>
   <alias id="INPUT" value="data/input_bgs/inputs_bg2/bg5.png"/>
   <image id="my-image">
     <load file="INPUT"/>
@@ -518,589 +200,1621 @@
   </image>
   <manual-gradient-degradations ref="my-copy">
     <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
+      <file>data/transformed_words/inputs_words1/text1_color_jitter.png</file>
       <strength>1</strength>
       <x>10</x>
       <y>10</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
+      <file>data/transformed_words/inputs_words1/text3_color_jitter.png</file>
       <strength>1</strength>
-      <x>171</x>
+      <x>350</x>
       <y>10</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
+      <file>data/transformed_words/inputs_words2/text6_elastic.png</file>
       <strength>1</strength>
-      <x>491</x>
+      <x>591</x>
       <y>10</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
+      <file>data/transformed_words/inputs_words1/text2_elastic.png</file>
       <strength>1</strength>
-      <x>649</x>
+      <x>779</x>
       <y>10</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
+      <file>data/transformed_words/inputs_words2/text6_original.png</file>
       <strength>1</strength>
-      <x>810</x>
+      <x>960</x>
       <y>10</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
+      <file>data/transformed_words/inputs_words2/text4_shear_h.png</file>
       <strength>1</strength>
-      <x>968</x>
+      <x>1128</x>
       <y>10</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
+      <file>data/transformed_words/inputs_words1/text1_color_jitter.png</file>
       <strength>1</strength>
-      <x>1136</x>
+      <x>1293</x>
       <y>10</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
-      <strength>1</strength>
-      <x>1294</x>
-      <y>10</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>1452</x>
-      <y>10</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
+      <file>data/transformed_words/inputs_words2/text6_elastic.png</file>
       <strength>1</strength>
       <x>10</x>
-      <y>108</y>
+      <y>138</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
+      <file>data/transformed_words/inputs_words2/text6_elastic.png</file>
       <strength>1</strength>
-      <x>171</x>
-      <y>108</y>
+      <x>198</x>
+      <y>138</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
+      <file>data/transformed_words/inputs_words1/text2_shear_h.png</file>
       <strength>1</strength>
-      <x>332</x>
-      <y>108</y>
+      <x>386</x>
+      <y>138</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
+      <file>data/transformed_words/inputs_words1/text3_blur_edges.png</file>
       <strength>1</strength>
-      <x>652</x>
-      <y>108</y>
+      <x>537</x>
+      <y>138</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
+      <file>data/transformed_words/inputs_words2/text6_shear_h.png</file>
       <strength>1</strength>
-      <x>873</x>
-      <y>108</y>
+      <x>778</x>
+      <y>138</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
+      <file>data/transformed_words/inputs_words1/text1_original.png</file>
       <strength>1</strength>
-      <x>1034</x>
-      <y>108</y>
+      <x>943</x>
+      <y>138</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
+      <file>data/transformed_words/inputs_words2/text4_shear_h.png</file>
       <strength>1</strength>
-      <x>1255</x>
-      <y>108</y>
+      <x>1263</x>
+      <y>138</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
+      <file>data/transformed_words/inputs_words1/text2_original.png</file>
       <strength>1</strength>
-      <x>10</x>
-      <y>220</y>
+      <x>1428</x>
+      <y>138</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
-      <strength>1</strength>
-      <x>330</x>
-      <y>220</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
-      <strength>1</strength>
-      <x>496</x>
-      <y>220</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
-      <strength>1</strength>
-      <x>654</x>
-      <y>220</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
-      <strength>1</strength>
-      <x>875</x>
-      <y>220</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
-      <strength>1</strength>
-      <x>1195</x>
-      <y>220</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>1416</x>
-      <y>220</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
+      <file>data/transformed_words/inputs_words2/text6_elastic.png</file>
       <strength>1</strength>
       <x>10</x>
-      <y>318</y>
+      <y>250</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
+      <file>data/transformed_words/inputs_words1/text1_shear_h.png</file>
       <strength>1</strength>
-      <x>231</x>
-      <y>318</y>
+      <x>198</x>
+      <y>250</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
-      <strength>1</strength>
-      <x>452</x>
-      <y>318</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
-      <strength>1</strength>
-      <x>772</x>
-      <y>318</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
-      <strength>1</strength>
-      <x>1092</x>
-      <y>318</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
-      <strength>1</strength>
-      <x>1258</x>
-      <y>318</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
-      <strength>1</strength>
-      <x>1479</x>
-      <y>318</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
-      <strength>1</strength>
-      <x>10</x>
-      <y>416</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>168</x>
-      <y>416</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
-      <strength>1</strength>
-      <x>336</x>
-      <y>416</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
-      <strength>1</strength>
-      <x>557</x>
-      <y>416</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
-      <strength>1</strength>
-      <x>877</x>
-      <y>416</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
-      <strength>1</strength>
-      <x>1043</x>
-      <y>416</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
-      <strength>1</strength>
-      <x>1264</x>
-      <y>416</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
-      <strength>1</strength>
-      <x>1430</x>
-      <y>416</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>10</x>
-      <y>557</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
-      <strength>1</strength>
-      <x>178</x>
-      <y>557</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
-      <strength>1</strength>
-      <x>498</x>
-      <y>557</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
-      <strength>1</strength>
-      <x>719</x>
-      <y>557</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
-      <strength>1</strength>
-      <x>940</x>
-      <y>557</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
-      <strength>1</strength>
-      <x>1106</x>
-      <y>557</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>1426</x>
-      <y>557</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
-      <strength>1</strength>
-      <x>10</x>
-      <y>669</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>231</x>
-      <y>669</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
-      <strength>1</strength>
-      <x>399</x>
-      <y>669</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
-      <strength>1</strength>
-      <x>719</x>
-      <y>669</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>1039</x>
-      <y>669</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>1207</x>
-      <y>669</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>1375</x>
-      <y>669</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
-      <strength>1</strength>
-      <x>10</x>
-      <y>777</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
-      <strength>1</strength>
-      <x>171</x>
-      <y>777</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
-      <strength>1</strength>
-      <x>332</x>
-      <y>777</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>652</x>
-      <y>777</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
-      <strength>1</strength>
-      <x>820</x>
-      <y>777</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
-      <strength>1</strength>
-      <x>986</x>
-      <y>777</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
-      <strength>1</strength>
-      <x>1144</x>
-      <y>777</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>1305</x>
-      <y>777</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
-      <strength>1</strength>
-      <x>1473</x>
-      <y>777</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
-      <strength>1</strength>
-      <x>10</x>
-      <y>885</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
-      <strength>1</strength>
-      <x>178</x>
-      <y>885</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
-      <strength>1</strength>
-      <x>344</x>
-      <y>885</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
+      <file>data/transformed_words/inputs_words2/text4_rotate.png</file>
       <strength>1</strength>
       <x>510</x>
-      <y>885</y>
+      <y>250</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
+      <file>data/transformed_words/inputs_words1/text1_shear_v.png</file>
       <strength>1</strength>
-      <x>731</x>
-      <y>885</y>
+      <x>671</x>
+      <y>250</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
+      <file>data/transformed_words/inputs_words1/text3_shear_h.png</file>
       <strength>1</strength>
-      <x>889</x>
-      <y>885</y>
+      <x>982</x>
+      <y>250</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
+      <file>data/transformed_words/inputs_words1/text3_color_jitter.png</file>
       <strength>1</strength>
-      <x>1110</x>
-      <y>885</y>
+      <x>1196</x>
+      <y>250</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
-      <strength>1</strength>
-      <x>1430</x>
-      <y>885</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
+      <file>data/transformed_words/inputs_words1/text1_shear_h.png</file>
       <strength>1</strength>
       <x>10</x>
-      <y>993</y>
+      <y>411</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
+      <file>data/transformed_words/inputs_words2/text5_shear_v.png</file>
       <strength>1</strength>
-      <x>178</x>
-      <y>993</y>
+      <x>322</x>
+      <y>411</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
+      <file>data/transformed_words/inputs_words1/text3_color_jitter.png</file>
       <strength>1</strength>
-      <x>498</x>
-      <y>993</y>
+      <x>478</x>
+      <y>411</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
+      <file>data/transformed_words/inputs_words2/text4_color_jitter.png</file>
       <strength>1</strength>
-      <x>664</x>
-      <y>993</y>
+      <x>719</x>
+      <y>411</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
+      <file>data/transformed_words/inputs_words1/text1_elastic.png</file>
       <strength>1</strength>
-      <x>822</x>
-      <y>993</y>
+      <x>905</x>
+      <y>411</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
+      <file>data/transformed_words/inputs_words1/text3_rotate.png</file>
       <strength>1</strength>
-      <x>983</x>
-      <y>993</y>
+      <x>1245</x>
+      <y>411</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
+      <file>data/transformed_words/inputs_words1/text2_rotate.png</file>
+      <strength>1</strength>
+      <x>1452</x>
+      <y>411</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_shear_v.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>539</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_original.png</file>
+      <strength>1</strength>
+      <x>173</x>
+      <y>539</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_rotate.png</file>
+      <strength>1</strength>
+      <x>493</x>
+      <y>539</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_elastic.png</file>
+      <strength>1</strength>
+      <x>659</x>
+      <y>539</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_original.png</file>
+      <strength>1</strength>
+      <x>840</x>
+      <y>539</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_shear_v.png</file>
+      <strength>1</strength>
+      <x>1001</x>
+      <y>539</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_original.png</file>
+      <strength>1</strength>
+      <x>1164</x>
+      <y>539</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_shear_h.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>680</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_blur_edges.png</file>
+      <strength>1</strength>
+      <x>322</x>
+      <y>680</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_shear_h.png</file>
+      <strength>1</strength>
+      <x>563</x>
+      <y>680</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_elastic.png</file>
+      <strength>1</strength>
+      <x>728</x>
+      <y>680</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_shear_v.png</file>
+      <strength>1</strength>
+      <x>906</x>
+      <y>680</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_color_jitter.png</file>
+      <strength>1</strength>
+      <x>1062</x>
+      <y>680</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_elastic.png</file>
+      <strength>1</strength>
+      <x>1250</x>
+      <y>680</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_rotate.png</file>
+      <strength>1</strength>
+      <x>1438</x>
+      <y>680</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_blur_edges.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>769</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_shear_h.png</file>
+      <strength>1</strength>
+      <x>251</x>
+      <y>769</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_blur_edges.png</file>
+      <strength>1</strength>
+      <x>465</x>
+      <y>769</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_original.png</file>
+      <strength>1</strength>
+      <x>646</x>
+      <y>769</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_elastic.png</file>
+      <strength>1</strength>
+      <x>966</x>
+      <y>769</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_shear_h.png</file>
       <strength>1</strength>
       <x>1144</x>
-      <y>993</y>
+      <y>769</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
+      <file>data/transformed_words/inputs_words2/text6_original.png</file>
       <strength>1</strength>
-      <x>1305</x>
-      <y>993</y>
+      <x>1358</x>
+      <y>769</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
+      <file>data/transformed_words/inputs_words2/text4_shear_v.png</file>
       <strength>1</strength>
-      <x>1473</x>
-      <y>993</y>
+      <x>1526</x>
+      <y>769</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
+      <file>data/transformed_words/inputs_words2/text6_shear_h.png</file>
       <strength>1</strength>
       <x>10</x>
-      <y>1085</y>
+      <y>910</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text1.png</file>
+      <file>data/transformed_words/inputs_words1/text1_rotate.png</file>
       <strength>1</strength>
-      <x>171</x>
-      <y>1085</y>
+      <x>175</x>
+      <y>910</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
+      <file>data/transformed_words/inputs_words1/text3_elastic.png</file>
       <strength>1</strength>
-      <x>491</x>
-      <y>1085</y>
+      <x>485</x>
+      <y>910</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
+      <file>data/transformed_words/inputs_words1/text1_shear_v.png</file>
       <strength>1</strength>
-      <x>712</x>
-      <y>1085</y>
+      <x>726</x>
+      <y>910</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
+      <file>data/transformed_words/inputs_words1/text3_blur_edges.png</file>
+      <strength>1</strength>
+      <x>1037</x>
+      <y>910</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_rotate.png</file>
+      <strength>1</strength>
+      <x>1278</x>
+      <y>910</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_rotate.png</file>
+      <strength>1</strength>
+      <x>1422</x>
+      <y>910</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_color_jitter.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>1028</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_color_jitter.png</file>
+      <strength>1</strength>
+      <x>350</x>
+      <y>1028</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_original.png</file>
+      <strength>1</strength>
+      <x>690</x>
+      <y>1028</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_color_jitter.png</file>
+      <strength>1</strength>
+      <x>851</x>
+      <y>1028</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_blur_edges.png</file>
+      <strength>1</strength>
+      <x>1039</x>
+      <y>1028</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_shear_h.png</file>
+      <strength>1</strength>
+      <x>1225</x>
+      <y>1028</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_shear_h.png</file>
+      <strength>1</strength>
+      <x>1376</x>
+      <y>1028</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_blur_edges.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>1138</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_elastic.png</file>
+      <strength>1</strength>
+      <x>198</x>
+      <y>1138</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_elastic.png</file>
+      <strength>1</strength>
+      <x>538</x>
+      <y>1138</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_original.png</file>
       <strength>1</strength>
       <x>878</x>
-      <y>1085</y>
+      <y>1138</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
+      <file>data/transformed_words/inputs_words2/text6_rotate.png</file>
       <strength>1</strength>
-      <x>1099</x>
-      <y>1085</y>
+      <x>1046</x>
+      <y>1138</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words1/text3.png</file>
+      <file>data/transformed_words/inputs_words2/text5_original.png</file>
       <strength>1</strength>
-      <x>1320</x>
-      <y>1085</y>
+      <x>1212</x>
+      <y>1138</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
+      <file>data/transformed_words/inputs_words2/text5_rotate.png</file>
+      <strength>1</strength>
+      <x>1370</x>
+      <y>1138</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_shear_h.png</file>
+      <strength>1</strength>
+      <x>1526</x>
+      <y>1138</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_shear_h.png</file>
       <strength>1</strength>
       <x>10</x>
-      <y>1197</y>
+      <y>1256</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
+      <file>data/transformed_words/inputs_words2/text5_rotate.png</file>
       <strength>1</strength>
-      <x>168</x>
-      <y>1197</y>
+      <x>167</x>
+      <y>1256</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
+      <file>data/transformed_words/inputs_words1/text1_original.png</file>
       <strength>1</strength>
-      <x>326</x>
-      <y>1197</y>
+      <x>323</x>
+      <y>1256</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
+      <file>data/transformed_words/inputs_words2/text5_shear_v.png</file>
       <strength>1</strength>
-      <x>492</x>
-      <y>1197</y>
+      <x>643</x>
+      <y>1256</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
+      <file>data/transformed_words/inputs_words2/text5_shear_v.png</file>
       <strength>1</strength>
-      <x>650</x>
-      <y>1197</y>
+      <x>799</x>
+      <y>1256</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
+      <file>data/transformed_words/inputs_words2/text5_shear_v.png</file>
       <strength>1</strength>
-      <x>818</x>
-      <y>1197</y>
+      <x>955</x>
+      <y>1256</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text5.png</file>
+      <file>data/transformed_words/inputs_words1/text3_shear_h.png</file>
       <strength>1</strength>
-      <x>984</x>
-      <y>1197</y>
+      <x>1111</x>
+      <y>1256</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text4.png</file>
+      <file>data/transformed_words/inputs_words2/text4_shear_h.png</file>
       <strength>1</strength>
-      <x>1142</x>
-      <y>1197</y>
+      <x>1325</x>
+      <y>1256</y>
     </degradation>
     <degradation>
-      <file>data/blurred_words/inputs_words2/text6.png</file>
+      <file>data/transformed_words/inputs_words2/text5_shear_v.png</file>
       <strength>1</strength>
-      <x>1308</x>
-      <y>1197</y>
-    </degradation>
-    <degradation>
-      <file>data/blurred_words/inputs_words1/text2.png</file>
-      <strength>1</strength>
-      <x>1476</x>
-      <y>1197</y>
+      <x>1490</x>
+      <y>1256</y>
     </degradation>
     <multi-core/>
     <iterations>500</iterations>
   </manual-gradient-degradations>
   <gradient-degradations ref="my-copy">
-    <strength>0.10</strength>
-    <density>4.92</density>
+    <strength>0.07</strength>
+    <density>0.83</density>
     <iterations>750</iterations>
     <source>data/stains/spots/</source>
   </gradient-degradations>
   <gradient-degradations ref="my-copy">
-    <strength>0.41</strength>
-    <density>4.08</density>
+    <strength>0.29</strength>
+    <density>0.38</density>
     <iterations>750</iterations>
     <source>data/stains/surfaces/</source>
   </gradient-degradations>
-  <save ref="my-copy" file="data/outputs/degraded_bg5.png"/>
+  <save ref="my-copy" file="data/outputs/degraded_1_bg5.png"/>
+  <alias id="INPUT" value="data/input_bgs/inputs_bg2/bg5.png"/>
+  <image id="my-image">
+    <load file="INPUT"/>
+  </image>
+  <image id="my-copy">
+    <copy ref="my-image"/>
+  </image>
+  <manual-gradient-degradations ref="my-copy">
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_original.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_original.png</file>
+      <strength>1</strength>
+      <x>330</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_color_jitter.png</file>
+      <strength>1</strength>
+      <x>498</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_rotate.png</file>
+      <strength>1</strength>
+      <x>739</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_color_jitter.png</file>
+      <strength>1</strength>
+      <x>946</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_original.png</file>
+      <strength>1</strength>
+      <x>1132</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_elastic.png</file>
+      <strength>1</strength>
+      <x>1452</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_shear_h.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>103</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_color_jitter.png</file>
+      <strength>1</strength>
+      <x>175</x>
+      <y>103</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_shear_v.png</file>
+      <strength>1</strength>
+      <x>515</x>
+      <y>103</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_blur_edges.png</file>
+      <strength>1</strength>
+      <x>679</x>
+      <y>103</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_blur_edges.png</file>
+      <strength>1</strength>
+      <x>1019</x>
+      <y>103</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_blur_edges.png</file>
+      <strength>1</strength>
+      <x>1200</x>
+      <y>103</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_color_jitter.png</file>
+      <strength>1</strength>
+      <x>1441</x>
+      <y>103</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_shear_v.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>201</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_shear_v.png</file>
+      <strength>1</strength>
+      <x>166</x>
+      <y>201</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_elastic.png</file>
+      <strength>1</strength>
+      <x>318</x>
+      <y>201</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_shear_h.png</file>
+      <strength>1</strength>
+      <x>506</x>
+      <y>201</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_elastic.png</file>
+      <strength>1</strength>
+      <x>671</x>
+      <y>201</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_rotate.png</file>
+      <strength>1</strength>
+      <x>849</x>
+      <y>201</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_blur_edges.png</file>
+      <strength>1</strength>
+      <x>1010</x>
+      <y>201</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_original.png</file>
+      <strength>1</strength>
+      <x>1196</x>
+      <y>201</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_shear_v.png</file>
+      <strength>1</strength>
+      <x>1362</x>
+      <y>201</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_elastic.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>309</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_shear_h.png</file>
+      <strength>1</strength>
+      <x>251</x>
+      <y>309</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_color_jitter.png</file>
+      <strength>1</strength>
+      <x>408</x>
+      <y>309</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_shear_v.png</file>
+      <strength>1</strength>
+      <x>748</x>
+      <y>309</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_rotate.png</file>
+      <strength>1</strength>
+      <x>963</x>
+      <y>309</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_original.png</file>
+      <strength>1</strength>
+      <x>1107</x>
+      <y>309</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_elastic.png</file>
+      <strength>1</strength>
+      <x>1427</x>
+      <y>309</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_elastic.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>423</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_rotate.png</file>
+      <strength>1</strength>
+      <x>350</x>
+      <y>423</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_rotate.png</file>
+      <strength>1</strength>
+      <x>506</x>
+      <y>423</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_shear_h.png</file>
+      <strength>1</strength>
+      <x>667</x>
+      <y>423</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_rotate.png</file>
+      <strength>1</strength>
+      <x>818</x>
+      <y>423</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_shear_h.png</file>
+      <strength>1</strength>
+      <x>1128</x>
+      <y>423</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_original.png</file>
+      <strength>1</strength>
+      <x>1342</x>
+      <y>423</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_shear_h.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>512</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_original.png</file>
+      <strength>1</strength>
+      <x>175</x>
+      <y>512</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_original.png</file>
+      <strength>1</strength>
+      <x>495</x>
+      <y>512</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_color_jitter.png</file>
+      <strength>1</strength>
+      <x>815</x>
+      <y>512</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_rotate.png</file>
+      <strength>1</strength>
+      <x>1003</x>
+      <y>512</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_elastic.png</file>
+      <strength>1</strength>
+      <x>1210</x>
+      <y>512</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_elastic.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>640</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_original.png</file>
+      <strength>1</strength>
+      <x>188</x>
+      <y>640</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_shear_v.png</file>
+      <strength>1</strength>
+      <x>349</x>
+      <y>640</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_shear_h.png</file>
+      <strength>1</strength>
+      <x>512</x>
+      <y>640</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_color_jitter.png</file>
+      <strength>1</strength>
+      <x>677</x>
+      <y>640</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_elastic.png</file>
+      <strength>1</strength>
+      <x>855</x>
+      <y>640</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_shear_v.png</file>
+      <strength>1</strength>
+      <x>1033</x>
+      <y>640</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_elastic.png</file>
+      <strength>1</strength>
+      <x>1185</x>
+      <y>640</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_shear_h.png</file>
+      <strength>1</strength>
+      <x>1363</x>
+      <y>640</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_shear_h.png</file>
+      <strength>1</strength>
+      <x>1528</x>
+      <y>640</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_shear_h.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>758</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_shear_h.png</file>
+      <strength>1</strength>
+      <x>175</x>
+      <y>758</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_elastic.png</file>
+      <strength>1</strength>
+      <x>389</x>
+      <y>758</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_shear_v.png</file>
+      <strength>1</strength>
+      <x>575</x>
+      <y>758</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_rotate.png</file>
+      <strength>1</strength>
+      <x>738</x>
+      <y>758</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_shear_h.png</file>
+      <strength>1</strength>
+      <x>904</x>
+      <y>758</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_elastic.png</file>
+      <strength>1</strength>
+      <x>1061</x>
+      <y>758</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_blur_edges.png</file>
+      <strength>1</strength>
+      <x>1249</x>
+      <y>758</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_original.png</file>
+      <strength>1</strength>
+      <x>1435</x>
+      <y>758</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_rotate.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>876</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_rotate.png</file>
+      <strength>1</strength>
+      <x>217</x>
+      <y>876</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_shear_v.png</file>
+      <strength>1</strength>
+      <x>424</x>
+      <y>876</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_original.png</file>
+      <strength>1</strength>
+      <x>639</x>
+      <y>876</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_original.png</file>
+      <strength>1</strength>
+      <x>805</x>
+      <y>876</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_elastic.png</file>
+      <strength>1</strength>
+      <x>966</x>
+      <y>876</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_shear_v.png</file>
+      <strength>1</strength>
+      <x>1152</x>
+      <y>876</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_elastic.png</file>
+      <strength>1</strength>
+      <x>1316</x>
+      <y>876</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_color_jitter.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>1004</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_color_jitter.png</file>
+      <strength>1</strength>
+      <x>350</x>
+      <y>1004</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_elastic.png</file>
+      <strength>1</strength>
+      <x>591</x>
+      <y>1004</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_original.png</file>
+      <strength>1</strength>
+      <x>832</x>
+      <y>1004</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_elastic.png</file>
+      <strength>1</strength>
+      <x>998</x>
+      <y>1004</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_shear_v.png</file>
+      <strength>1</strength>
+      <x>1186</x>
+      <y>1004</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_original.png</file>
+      <strength>1</strength>
+      <x>1497</x>
+      <y>1004</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_original.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>1114</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_rotate.png</file>
+      <strength>1</strength>
+      <x>231</x>
+      <y>1114</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_original.png</file>
+      <strength>1</strength>
+      <x>438</x>
+      <y>1114</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_blur_edges.png</file>
+      <strength>1</strength>
+      <x>606</x>
+      <y>1114</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_blur_edges.png</file>
+      <strength>1</strength>
+      <x>946</x>
+      <y>1114</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_elastic.png</file>
+      <strength>1</strength>
+      <x>1286</x>
+      <y>1114</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_blur_edges.png</file>
+      <strength>1</strength>
+      <x>1472</x>
+      <y>1114</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_blur_edges.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>1216</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_shear_v.png</file>
+      <strength>1</strength>
+      <x>188</x>
+      <y>1216</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_elastic.png</file>
+      <strength>1</strength>
+      <x>352</x>
+      <y>1216</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_original.png</file>
+      <strength>1</strength>
+      <x>538</x>
+      <y>1216</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_color_jitter.png</file>
+      <strength>1</strength>
+      <x>699</x>
+      <y>1216</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_color_jitter.png</file>
+      <strength>1</strength>
+      <x>887</x>
+      <y>1216</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_shear_h.png</file>
+      <strength>1</strength>
+      <x>1068</x>
+      <y>1216</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_shear_h.png</file>
+      <strength>1</strength>
+      <x>1233</x>
+      <y>1216</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_original.png</file>
+      <strength>1</strength>
+      <x>1545</x>
+      <y>1216</y>
+    </degradation>
+    <multi-core/>
+    <iterations>500</iterations>
+  </manual-gradient-degradations>
+  <gradient-degradations ref="my-copy">
+    <strength>0.08</strength>
+    <density>0.79</density>
+    <iterations>750</iterations>
+    <source>data/stains/spots/</source>
+  </gradient-degradations>
+  <gradient-degradations ref="my-copy">
+    <strength>0.07</strength>
+    <density>1.38</density>
+    <iterations>750</iterations>
+    <source>data/stains/surfaces/</source>
+  </gradient-degradations>
+  <save ref="my-copy" file="data/outputs/degraded_2_bg5.png"/>
+  <alias id="INPUT" value="data/input_bgs/inputs_bg1/bg2.png"/>
+  <image id="my-image">
+    <load file="INPUT"/>
+  </image>
+  <image id="my-copy">
+    <copy ref="my-image"/>
+  </image>
+  <manual-gradient-degradations ref="my-copy">
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_shear_v.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_color_jitter.png</file>
+      <strength>1</strength>
+      <x>166</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_shear_v.png</file>
+      <strength>1</strength>
+      <x>347</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_rotate.png</file>
+      <strength>1</strength>
+      <x>510</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_original.png</file>
+      <strength>1</strength>
+      <x>717</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_rotate.png</file>
+      <strength>1</strength>
+      <x>878</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_rotate.png</file>
+      <strength>1</strength>
+      <x>1044</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_elastic.png</file>
+      <strength>1</strength>
+      <x>1205</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_rotate.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>171</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_blur_edges.png</file>
+      <strength>1</strength>
+      <x>171</x>
+      <y>171</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_blur_edges.png</file>
+      <strength>1</strength>
+      <x>359</x>
+      <y>171</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_color_jitter.png</file>
+      <strength>1</strength>
+      <x>537</x>
+      <y>171</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_rotate.png</file>
+      <strength>1</strength>
+      <x>718</x>
+      <y>171</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_rotate.png</file>
+      <strength>1</strength>
+      <x>925</x>
+      <y>171</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_blur_edges.png</file>
+      <strength>1</strength>
+      <x>1086</x>
+      <y>171</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_shear_v.png</file>
+      <strength>1</strength>
+      <x>1264</x>
+      <y>171</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_shear_v.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>299</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_color_jitter.png</file>
+      <strength>1</strength>
+      <x>173</x>
+      <y>299</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_shear_h.png</file>
+      <strength>1</strength>
+      <x>354</x>
+      <y>299</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_shear_v.png</file>
+      <strength>1</strength>
+      <x>568</x>
+      <y>299</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_color_jitter.png</file>
+      <strength>1</strength>
+      <x>732</x>
+      <y>299</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_elastic.png</file>
+      <strength>1</strength>
+      <x>920</x>
+      <y>299</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_blur_edges.png</file>
+      <strength>1</strength>
+      <x>1108</x>
+      <y>299</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_shear_v.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>427</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_rotate.png</file>
+      <strength>1</strength>
+      <x>321</x>
+      <y>427</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_elastic.png</file>
+      <strength>1</strength>
+      <x>631</x>
+      <y>427</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_elastic.png</file>
+      <strength>1</strength>
+      <x>819</x>
+      <y>427</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_blur_edges.png</file>
+      <strength>1</strength>
+      <x>1007</x>
+      <y>427</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_shear_h.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>555</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_shear_v.png</file>
+      <strength>1</strength>
+      <x>175</x>
+      <y>555</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_shear_v.png</file>
+      <strength>1</strength>
+      <x>486</x>
+      <y>555</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_blur_edges.png</file>
+      <strength>1</strength>
+      <x>642</x>
+      <y>555</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_blur_edges.png</file>
+      <strength>1</strength>
+      <x>823</x>
+      <y>555</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_original.png</file>
+      <strength>1</strength>
+      <x>1004</x>
+      <y>555</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_rotate.png</file>
+      <strength>1</strength>
+      <x>1225</x>
+      <y>555</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_rotate.png</file>
+      <strength>1</strength>
+      <x>1432</x>
+      <y>555</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_blur_edges.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>683</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_shear_h.png</file>
+      <strength>1</strength>
+      <x>191</x>
+      <y>683</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_original.png</file>
+      <strength>1</strength>
+      <x>356</x>
+      <y>683</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_shear_h.png</file>
+      <strength>1</strength>
+      <x>524</x>
+      <y>683</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_rotate.png</file>
+      <strength>1</strength>
+      <x>689</x>
+      <y>683</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_elastic.png</file>
+      <strength>1</strength>
+      <x>850</x>
+      <y>683</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_shear_v.png</file>
+      <strength>1</strength>
+      <x>1190</x>
+      <y>683</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_rotate.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>811</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_shear_v.png</file>
+      <strength>1</strength>
+      <x>176</x>
+      <y>811</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_shear_v.png</file>
+      <strength>1</strength>
+      <x>339</x>
+      <y>811</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_shear_v.png</file>
+      <strength>1</strength>
+      <x>502</x>
+      <y>811</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_color_jitter.png</file>
+      <strength>1</strength>
+      <x>813</x>
+      <y>811</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_blur_edges.png</file>
+      <strength>1</strength>
+      <x>999</x>
+      <y>811</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_shear_v.png</file>
+      <strength>1</strength>
+      <x>1177</x>
+      <y>811</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_shear_v.png</file>
+      <strength>1</strength>
+      <x>1341</x>
+      <y>811</y>
+    </degradation>
+    <multi-core/>
+    <iterations>500</iterations>
+  </manual-gradient-degradations>
+  <gradient-degradations ref="my-copy">
+    <strength>0.17</strength>
+    <density>0.90</density>
+    <iterations>750</iterations>
+    <source>data/stains/spots/</source>
+  </gradient-degradations>
+  <gradient-degradations ref="my-copy">
+    <strength>0.11</strength>
+    <density>0.67</density>
+    <iterations>750</iterations>
+    <source>data/stains/surfaces/</source>
+  </gradient-degradations>
+  <save ref="my-copy" file="data/outputs/degraded_3_bg2.png"/>
+  <alias id="INPUT" value="data/input_bgs/inputs_bg2/bg6.png"/>
+  <image id="my-image">
+    <load file="INPUT"/>
+  </image>
+  <image id="my-copy">
+    <copy ref="my-image"/>
+  </image>
+  <manual-gradient-degradations ref="my-copy">
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_blur_edges.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_shear_h.png</file>
+      <strength>1</strength>
+      <x>188</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_shear_v.png</file>
+      <strength>1</strength>
+      <x>339</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_blur_edges.png</file>
+      <strength>1</strength>
+      <x>503</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_rotate.png</file>
+      <strength>1</strength>
+      <x>689</x>
+      <y>10</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_shear_v.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>120</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_shear_h.png</file>
+      <strength>1</strength>
+      <x>166</x>
+      <y>120</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_shear_v.png</file>
+      <strength>1</strength>
+      <x>478</x>
+      <y>120</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_original.png</file>
+      <strength>1</strength>
+      <x>642</x>
+      <y>120</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_blur_edges.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>252</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_color_jitter.png</file>
+      <strength>1</strength>
+      <x>188</x>
+      <y>252</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_rotate.png</file>
+      <strength>1</strength>
+      <x>376</x>
+      <y>252</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_elastic.png</file>
+      <strength>1</strength>
+      <x>520</x>
+      <y>252</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_original.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>362</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_color_jitter.png</file>
+      <strength>1</strength>
+      <x>330</x>
+      <y>362</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_shear_v.png</file>
+      <strength>1</strength>
+      <x>508</x>
+      <y>362</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text3_shear_v.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>480</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_elastic.png</file>
+      <strength>1</strength>
+      <x>225</x>
+      <y>480</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_original.png</file>
+      <strength>1</strength>
+      <x>406</x>
+      <y>480</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text2_shear_h.png</file>
+      <strength>1</strength>
+      <x>572</x>
+      <y>480</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_shear_h.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>571</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_rotate.png</file>
+      <strength>1</strength>
+      <x>167</x>
+      <y>571</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words1/text1_rotate.png</file>
+      <strength>1</strength>
+      <x>333</x>
+      <y>571</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text6_elastic.png</file>
+      <strength>1</strength>
+      <x>643</x>
+      <y>571</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_rotate.png</file>
+      <strength>1</strength>
+      <x>10</x>
+      <y>660</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_blur_edges.png</file>
+      <strength>1</strength>
+      <x>166</x>
+      <y>660</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_rotate.png</file>
+      <strength>1</strength>
+      <x>344</x>
+      <y>660</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text5_shear_h.png</file>
+      <strength>1</strength>
+      <x>500</x>
+      <y>660</y>
+    </degradation>
+    <degradation>
+      <file>data/transformed_words/inputs_words2/text4_shear_v.png</file>
+      <strength>1</strength>
+      <x>657</x>
+      <y>660</y>
+    </degradation>
+    <multi-core/>
+    <iterations>500</iterations>
+  </manual-gradient-degradations>
+  <gradient-degradations ref="my-copy">
+    <strength>0.26</strength>
+    <density>2.15</density>
+    <iterations>750</iterations>
+    <source>data/stains/spots/</source>
+  </gradient-degradations>
+  <gradient-degradations ref="my-copy">
+    <strength>0.28</strength>
+    <density>0.36</density>
+    <iterations>750</iterations>
+    <source>data/stains/surfaces/</source>
+  </gradient-degradations>
+  <save ref="my-copy" file="data/outputs/degraded_4_bg6.png"/>
 </root>

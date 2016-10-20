@@ -1,0 +1,2 @@
+data/transformed_words/inputs_words1/
+data/transformed_words/inputs_words2/

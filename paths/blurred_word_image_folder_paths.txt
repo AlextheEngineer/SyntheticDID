@@ -1,2 +1,0 @@
-data/blurred_words/inputs_words1/
-data/blurred_words/inputs_words2/

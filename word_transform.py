@@ -1,5 +1,5 @@
 
-import os
+import os, glob
 import sys
 import cv2
 import math
@@ -7,9 +7,23 @@ import random
 import numpy as np
 import numpy.random
 import scipy.ndimage
+import re 
 
+#Macro
+WHITE = [255, 255, 255]
 
-def apply_blur_edges(im, blur_sigma=0.75, blur_width=2):
+#Read a file to load word images
+word_image_location_file = open("paths/word_image_folder_paths.txt","r")
+word_image_folder_list = word_image_location_file.readlines()
+for idx, item in enumerate(word_image_folder_list):
+    word_image_folder_list[idx] = item.rstrip('\r\n')
+#print("Word input folders")
+#print(word_image_folder_list)
+base_dest_path = "data/transformed_words/"
+
+#======================Transform functions======================#
+
+def apply_blur_edges(im, margin_widthm, blur_sigma=0.75, blur_width=2):
     '''
     im - image where white (255) indicates background and all other values foreground
     blur_sigma - the strength of bluring used around the edges
@@ -32,6 +46,7 @@ def apply_blur_edges(im, blur_sigma=0.75, blur_width=2):
     # make of only the pixels immediately around the original foreground
     eroded_mask[np.logical_and(eroded != 255, original_mask != 1)] = 2
     out = im * original_mask + eroded_mask * blurred + (1 - (original_mask + eroded_mask)) * 255
+    out = cv2.copyMakeBorder(out,margin_width,margin_width,margin_width,margin_width,cv2.BORDER_CONSTANT,value=WHITE)
     return out
 
 
@@ -64,7 +79,7 @@ def apply_foreground_color_noise(im):
     return np.concatenate( (b[:,:,np.newaxis], g[:,:,np.newaxis], r[:,:,np.newaxis]), axis=2)
 
 
-def apply_elastic_deformation(im, alpha=10, sigma=2.5):
+def apply_elastic_deformation(im, margin_width, alpha=10, sigma=2.5):
     displacement_x = smoothed_random_field(im.shape[:2], -1 * alpha, alpha, sigma)
     displacement_y = smoothed_random_field(im.shape[:2], -1 * alpha, alpha, sigma)
 
@@ -92,7 +107,7 @@ def apply_elastic_deformation(im, alpha=10, sigma=2.5):
 
     ## first order spline interpoloation (bilinear?) using the backwards mapping
     output = scipy.ndimage.map_coordinates(im, coords, order=1, mode='reflect')
-
+    output = cv2.copyMakeBorder(output,margin_width,margin_width,margin_width,margin_width,cv2.BORDER_CONSTANT,value=WHITE)
     return output
 
 
@@ -110,7 +125,7 @@ def apply_resize(im, height, width):
     return cv2.resize(im, size)
 
 
-def apply_color_jitter(im, sigma):
+def apply_color_jitter(im, sigma, margin_width):
     foreground_mask = np.zeros_like(im)
     foreground_mask[im != 255] = 1
     im = im.astype(int)  # protect against over-flow wrapping if im is uint8
@@ -123,6 +138,7 @@ def apply_color_jitter(im, sigma):
     # truncate back to image range
     im = np.clip(im, 0, 255)
     im = im.astype(np.uint8) 
+    im = cv2.copyMakeBorder(im,margin_width,margin_width,margin_width,margin_width,cv2.BORDER_CONSTANT,value=WHITE)
     return im
 
 def apply_padding(im):
@@ -133,15 +149,17 @@ def apply_padding(im):
     
 
 
-def apply_rotation(im, degree):
+def apply_rotation(im, degree, margin_width):
     center = (im.shape[0] / 2, im.shape[1] / 2)
     rot_mat = cv2.getRotationMatrix2D(center, degree, 1.0)
     padded = apply_padding(im)
     rotated = cv2.warpAffine(padded, rot_mat, (padded.shape[1], padded.shape[0]), flags=cv2.INTER_LINEAR, borderValue=255)
-    return crop_to_foreground(rotated)
+    rotated = crop_to_foreground(rotated);
+    rotated = cv2.copyMakeBorder(rotated,margin_width,margin_width,margin_width,margin_width,cv2.BORDER_CONSTANT,value=WHITE)
+    return rotated
 
 
-def apply_shear(im, degree, is_horizontal):
+def apply_shear(im, degree, is_horizontal, margin_width):
     radians = math.tan(degree * math.pi / 180)
     shear_mat = np.array([ [1, 0, 0], [0, 1, 0] ], dtype=np.float)
     if is_horizontal:
@@ -150,7 +168,9 @@ def apply_shear(im, degree, is_horizontal):
         shear_mat[1,0] = radians
     padded = apply_padding(im)
     sheared = cv2.warpAffine(padded, shear_mat, (padded.shape[1], padded.shape[0]), flags=cv2.INTER_LINEAR, borderValue=255)
-    return crop_to_foreground(sheared)
+    sheared = crop_to_foreground(sheared)
+    sheared = cv2.copyMakeBorder(sheared,margin_width,margin_width,margin_width,margin_width,cv2.BORDER_CONSTANT,value=WHITE)
+    return sheared
 
 
 def apply_perspective(im, p1=None, p2=None, p3=None, p4=None, sigma=5e-4):
@@ -181,26 +201,41 @@ def apply_perspective(im, p1=None, p2=None, p3=None, p4=None, sigma=5e-4):
     transformed = cv2.warpPerspective(padded, M, (padded.shape[1], padded.shape[0]), borderValue=255)
     return crop_to_foreground(transformed)
 
+#======================Main======================#
+if len(sys.argv)!= 6:
+	print("Incorrect parameters")
+	print("Usage: \npython word_transform.py h_shear_degree_scale v_shear_degree_scale rotate_degree_scale color_jitter_sigma margin_width")
+	sys.exit()
 
-def go(im_file, out_dir):
-    im = cv2.imread(im_file, 0)
-    cv2.imwrite(os.path.join(out_dir, 'original.png'), im)
+h_shear_degree_scale = random.random()*float(sys.argv[1])
+v_shear_degree_scale = random.random()*float(sys.argv[2])
+rotate_degree_scale = random.random()*float(sys.argv[3])
+color_jitter_sigma = random.random()*float(sys.argv[4])
+margin_width = int(sys.argv[5])
 
-    cv2.imwrite(os.path.join(out_dir, 'perspective.png'), apply_perspective(im))
-    cv2.imwrite(os.path.join(out_dir, 'shear_h.png'), apply_shear(im, 10, True))
-    cv2.imwrite(os.path.join(out_dir, 'shear_v.png'), apply_shear(im, 5, False))
-    cv2.imwrite(os.path.join(out_dir, 'rotate.png'), apply_rotation(im, 5))
-    cv2.imwrite(os.path.join(out_dir, 'elastic.png'), apply_elastic_deformation(im))
-    cv2.imwrite(os.path.join(out_dir, 'color_jitter.png'), apply_color_jitter(im, 10))
-    cv2.imwrite(os.path.join(out_dir, 'resize.png'), apply_resize(im, 200, 300))
-    blurred_edges = apply_blur_edges(im)
-    cv2.imwrite(os.path.join(out_dir, 'blur_edges.png'), blurred_edges)
-    gray_noised = apply_foreground_noise(blurred_edges)
-    cv2.imwrite(os.path.join(out_dir, 'gray_noised.png'), gray_noised)
-    color_noised = apply_foreground_color_noise(blurred_edges)
-    cv2.imwrite(os.path.join(out_dir, 'color_noised.png'), color_noised)
-
-if __name__ == "__main__":
-    go(sys.argv[1], sys.argv[2])
-
-
+for word_img_folder in word_image_folder_list:
+    new_dirname = os.path.basename(os.path.normpath(word_img_folder))
+    dest_path = base_dest_path + new_dirname
+    print("Creating images at path: " + dest_path)
+    os.makedirs(dest_path, exist_ok=True)
+    for img_file_name in glob.glob(os.path.join(word_img_folder, "*.png")):
+        im = cv2.imread(img_file_name, 0)
+        #print(img_file_name.replace("\\","/"))
+        splitted_img_name = os.path.basename(img_file_name).split(".")
+        img_name = splitted_img_name[len(splitted_img_name)-2]
+        print("img_name: " + img_name)
+        img_name = img_name + "_"
+        cv2.imwrite(os.path.join(dest_path, img_name+'original.png'), im)
+        #cv2.imwrite(os.path.join(dest_path, 'perspective.png'), apply_perspective(im))
+        cv2.imwrite(os.path.join(dest_path, img_name+'shear_h.png'), apply_shear(im, h_shear_degree_scale, True, margin_width))
+        cv2.imwrite(os.path.join(dest_path, img_name+'shear_v.png'), apply_shear(im, v_shear_degree_scale, False, margin_width))
+        cv2.imwrite(os.path.join(dest_path, img_name+'rotate.png'), apply_rotation(im, rotate_degree_scale, margin_width))
+        cv2.imwrite(os.path.join(dest_path, img_name+'elastic.png'), apply_elastic_deformation(im, margin_width))
+        cv2.imwrite(os.path.join(dest_path, img_name+'color_jitter.png'), apply_color_jitter(im, color_jitter_sigma, margin_width))
+        #cv2.imwrite(os.path.join(dest_path, 'resize.png'), apply_resize(im, 200, 300))
+        blurred_edges = apply_blur_edges(im, margin_width)
+        cv2.imwrite(os.path.join(dest_path, img_name+'blur_edges.png'), blurred_edges)
+        #gray_noised = apply_foreground_noise(blurred_edges)
+        #cv2.imwrite(os.path.join(dest_path, img_name+'gray_noised.png'), gray_noised)
+        #color_noised = apply_foreground_color_noise(blurred_edges)
+        #scv2.imwrite(os.path.join(dest_path, img_name+'color_noised.png'), color_noised)

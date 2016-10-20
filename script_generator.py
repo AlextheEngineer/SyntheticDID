@@ -41,24 +41,26 @@ print("     left_margin: "+str(left_margin))
 print("     top_margin: "+str(top_margin))
 print("     word_spacing: "+str(word_spacing))
 print("     line_spacing: "+str(line_spacing))
+print("     stain_strength_scale: "+str(stain_strength_scale))
+print("     stain_density_scale: "+str(stain_density_scale))
 print("     output_path: "+output_path)
 print("\n")
 
 #Read a file to load word images
-word_image_location_file = open("paths/blurred_word_image_folder_paths.txt","r")
+word_image_location_file = open("paths/transformed_word_image_folder_paths.txt","r")
 word_image_folder_list = word_image_location_file.readlines()
 for idx, item in enumerate(word_image_folder_list):
     word_image_folder_list[idx] = item.rstrip('\r\n')
-print("Word input folders")
-print(word_image_folder_list)
+#print("Word input folders")
+#print(word_image_folder_list)
 
 #Read a file to load background images
 bg_image_location_file = open("paths/word_bg_folder_paths.txt","r")
 bg_image_folder_list = bg_image_location_file.readlines()
 for idx, item in enumerate(bg_image_folder_list):
     bg_image_folder_list[idx] = item.rstrip('\r\n')
-print("Bg input folders")
-print(bg_image_folder_list)
+#print("Bg input folders")
+#print(bg_image_folder_list)
 
 #Read a file to load stain paths
 stain_paths_file = open("paths/stain_folder_paths.txt","r")
@@ -174,7 +176,7 @@ for i in range(output_num):
         #<save ref="my-copy" file="outputs    ext_insertion_test1.png"/>
     save_e = etree.SubElement(root, "save")
     save_e.set("ref", "my-copy")
-    save_e.set("file", "data/outputs/degraded_"+bg_image_name)
+    save_e.set("file", "data/outputs/degraded_"+str(i)+"_"+bg_image_name)
     
 output_xml = open("data_generator_script.xml", 'w')
 output_xml.write(etree.tostring(root, pretty_print=True).decode("utf-8"))
@@ -195,4 +197,6 @@ for element in root.findall("save"):
     element.set("file", "/".join(splitted_value))
 white_bg_xml = open("match_generator_script.xml", 'w')
 white_bg_xml.write(etree.tostring(root, pretty_print=True).decode("utf-8"))
-    
+print("match_generator_script.xml created")
+print("data_generator_script.xml created")
+print("Usage: java -jar Divadid.jar YOUR_XML.xml")
