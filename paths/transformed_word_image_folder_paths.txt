@@ -1,2 +1,2 @@
-data/transformed_words/inputs_words1/
-data/transformed_words/inputs_words2/
+data/transformed_words/a01-000u/
+data/transformed_words/a01-000x/

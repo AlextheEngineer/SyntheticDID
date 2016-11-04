@@ -18,3 +18,9 @@ os.chdir(directory)
 filelist = [ f for f in os.listdir(".") if f.endswith(".png") ]
 for f in filelist:
     os.remove(f)
+    
+directory='../../data/transformed_words/'
+os.chdir(directory)  
+filelist = [ f for f in os.listdir(".") if f.endswith(".png") ]
+for f in filelist:
+    os.remove(f)

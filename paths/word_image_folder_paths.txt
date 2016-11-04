@@ -1,2 +1,2 @@
-data/input_words/inputs_words1/
-data/input_words/inputs_words2/
+data/input_words/word_images/a01-000u/
+data/input_words/word_images/a01-000x/

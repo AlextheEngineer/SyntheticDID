@@ -23,7 +23,7 @@ base_dest_path = "data/transformed_words/"
 
 #======================Transform functions======================#
 
-def apply_blur_edges(im, margin_widthm, blur_sigma=0.75, blur_width=2):
+def apply_blur_edges(im, margin_width, blur_sigma, blur_width=2):
     '''
     im - image where white (255) indicates background and all other values foreground
     blur_sigma - the strength of bluring used around the edges
@@ -79,7 +79,7 @@ def apply_foreground_color_noise(im):
     return np.concatenate( (b[:,:,np.newaxis], g[:,:,np.newaxis], r[:,:,np.newaxis]), axis=2)
 
 
-def apply_elastic_deformation(im, margin_width, alpha=10, sigma=2.5):
+def apply_elastic_deformation(im, margin_width, sigma, alpha=10):
     displacement_x = smoothed_random_field(im.shape[:2], -1 * alpha, alpha, sigma)
     displacement_y = smoothed_random_field(im.shape[:2], -1 * alpha, alpha, sigma)
 
@@ -201,41 +201,59 @@ def apply_perspective(im, p1=None, p2=None, p3=None, p4=None, sigma=5e-4):
     transformed = cv2.warpPerspective(padded, M, (padded.shape[1], padded.shape[0]), borderValue=255)
     return crop_to_foreground(transformed)
 
+def get_random_img_transform(original_img_path, h_shear_degree_scale, v_shear_degree_scale, \
+rotate_degree_scale, color_jitter_sigma, elastic_sigma, blur_sigma, margin_width):
+    im = cv2.imread(original_img_path, 0)
+    
+    im = apply_blur_edges(im, margin_width, blur_sigma)
+    im = apply_color_jitter(im, color_jitter_sigma, margin_width)
+    im = apply_elastic_deformation(im, margin_width, elastic_sigma)
+    
+    im = apply_shear(im, h_shear_degree_scale, True, margin_width)
+    im = apply_shear(im, v_shear_degree_scale, False, margin_width)
+    im = apply_rotation(im, rotate_degree_scale, margin_width)
+    
+    im = crop_to_foreground(im)
+    im = cv2.copyMakeBorder(im,margin_width,margin_width,margin_width,margin_width,cv2.BORDER_CONSTANT,value=WHITE)
+    return im
+    
+    
+    
 #======================Main======================#
-if len(sys.argv)!= 6:
-	print("Incorrect parameters")
-	print("Usage: \npython word_transform.py h_shear_degree_scale v_shear_degree_scale rotate_degree_scale color_jitter_sigma margin_width")
-	sys.exit()
+#if len(sys.argv)!= 6:
+#	print("Incorrect parameters")
+#	print("Usage: \npython word_transform.py h_shear_degree_scale v_shear_degree_scale rotate_degree_scale color_jitter_sigma margin_width")
+#	sys.exit()
 
-h_shear_degree_scale = random.random()*float(sys.argv[1])
-v_shear_degree_scale = random.random()*float(sys.argv[2])
-rotate_degree_scale = random.random()*float(sys.argv[3])
-color_jitter_sigma = random.random()*float(sys.argv[4])
-margin_width = int(sys.argv[5])
+#h_shear_degree_scale = random.random()*float(sys.argv[1])
+#v_shear_degree_scale = random.random()*float(sys.argv[2])
+#rotate_degree_scale = random.random()*float(sys.argv[3])
+#color_jitter_sigma = random.random()*float(sys.argv[4])
+#margin_width = int(sys.argv[5])
 
-for word_img_folder in word_image_folder_list:
-    new_dirname = os.path.basename(os.path.normpath(word_img_folder))
-    dest_path = base_dest_path + new_dirname
-    print("Creating images at path: " + dest_path)
-    os.makedirs(dest_path, exist_ok=True)
-    for img_file_name in glob.glob(os.path.join(word_img_folder, "*.png")):
-        im = cv2.imread(img_file_name, 0)
-        #print(img_file_name.replace("\\","/"))
-        splitted_img_name = os.path.basename(img_file_name).split(".")
-        img_name = splitted_img_name[len(splitted_img_name)-2]
-        print("img_name: " + img_name)
-        img_name = img_name + "_"
-        cv2.imwrite(os.path.join(dest_path, img_name+'original.png'), im)
-        #cv2.imwrite(os.path.join(dest_path, 'perspective.png'), apply_perspective(im))
-        cv2.imwrite(os.path.join(dest_path, img_name+'shear_h.png'), apply_shear(im, h_shear_degree_scale, True, margin_width))
-        cv2.imwrite(os.path.join(dest_path, img_name+'shear_v.png'), apply_shear(im, v_shear_degree_scale, False, margin_width))
-        cv2.imwrite(os.path.join(dest_path, img_name+'rotate.png'), apply_rotation(im, rotate_degree_scale, margin_width))
-        cv2.imwrite(os.path.join(dest_path, img_name+'elastic.png'), apply_elastic_deformation(im, margin_width))
-        cv2.imwrite(os.path.join(dest_path, img_name+'color_jitter.png'), apply_color_jitter(im, color_jitter_sigma, margin_width))
-        #cv2.imwrite(os.path.join(dest_path, 'resize.png'), apply_resize(im, 200, 300))
-        blurred_edges = apply_blur_edges(im, margin_width)
-        cv2.imwrite(os.path.join(dest_path, img_name+'blur_edges.png'), blurred_edges)
-        #gray_noised = apply_foreground_noise(blurred_edges)
-        #cv2.imwrite(os.path.join(dest_path, img_name+'gray_noised.png'), gray_noised)
-        #color_noised = apply_foreground_color_noise(blurred_edges)
-        #scv2.imwrite(os.path.join(dest_path, img_name+'color_noised.png'), color_noised)
+#for word_img_folder in word_image_folder_list:
+#    new_dirname = os.path.basename(os.path.normpath(word_img_folder))
+#    dest_path = base_dest_path + new_dirname
+#    print("Creating images at path: " + dest_path)
+#    os.makedirs(dest_path, exist_ok=True)
+    #for img_file_name in glob.glob(os.path.join(word_img_folder, "*.png")):
+    #    im = cv2.imread(img_file_name, 0)
+    #    print(img_file_name.replace("\\","/"))
+    #    splitted_img_name = os.path.basename(img_file_name).split(".")
+    #    img_name = splitted_img_name[len(splitted_img_name)-2]
+    #    print("img_name: " + img_name)
+    #    img_name = img_name + "_"
+    #    cv2.imwrite(os.path.join(dest_path, img_name+'original.png'), cv2.copyMakeBorder(im,margin_width,margin_width,margin_width,margin_width,cv2.BORDER_CONSTANT,value=WHITE))
+    #    cv2.imwrite(os.path.join(dest_path, 'perspective.png'), apply_perspective(im))
+    #    cv2.imwrite(os.path.join(dest_path, img_name+'shear_h.png'), apply_shear(im, h_shear_degree_scale, True, margin_width))
+    #    cv2.imwrite(os.path.join(dest_path, img_name+'shear_v.png'), apply_shear(im, v_shear_degree_scale, False, margin_width))
+    #    cv2.imwrite(os.path.join(dest_path, img_name+'rotate.png'), apply_rotation(im, rotate_degree_scale, margin_width))
+    #    cv2.imwrite(os.path.join(dest_path, img_name+'elastic.png'), apply_elastic_deformation(im, margin_width))
+    #    cv2.imwrite(os.path.join(dest_path, img_name+'color_jitter.png'), apply_color_jitter(im, color_jitter_sigma, margin_width))
+    #    cv2.imwrite(os.path.join(dest_path, 'resize.png'), apply_resize(im, 200, 300))
+    #    blurred_edges = apply_blur_edges(im, margin_width)
+    #    cv2.imwrite(os.path.join(dest_path, img_name+'blur_edges.png'), blurred_edges)
+    #    gray_noised = apply_foreground_noise(blurred_edges)
+    #    cv2.imwrite(os.path.join(dest_path, img_name+'gray_noised.png'), gray_noised)
+    #    color_noised = apply_foreground_color_noise(blurred_edges)
+    #    scv2.imwrite(os.path.join(dest_path, img_name+'color_noised.png'), color_noised)
