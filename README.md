@@ -1,8 +1,10 @@
 # SyntheticDID
 
 This documentation will cover how to correctly generate synthesized images for training neural-networks
+
 Requirements:
     OpenCV, Python(currently using 3.5.2), Java(currently using 1.8.0_101)
+
 References:
     https://diuf.unifr.ch/main/hisdoc/divadid-document-image-degradation
 
@@ -13,6 +15,7 @@ References:
         3. text noisiness level(float:1-5)
     
     *And performs the following actions:
+    
         1.Generates the XML file, which then gets run by using the following command using
         DivaDid:
             java -jar DivaDid.jar data_generator_script.xml
