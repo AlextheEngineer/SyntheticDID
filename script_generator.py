@@ -126,8 +126,11 @@ from lxml import etree
 x_value = left_margin
 y_value = top_margin
 root = etree.Element("root")
+
+existing_output_num = len(os.listdir('data/outputs'))
 #For each output
 for i in range(output_num):
+    output_index = existing_output_num + i
     #Fill the background with words
     alias_e = etree.SubElement(root, "alias")
     alias_e.set("id", "INPUT")
@@ -176,7 +179,7 @@ for i in range(output_num):
         word_rand_folder = random.choice(word_image_folder_list)
         word_image_name = random.choice(os.listdir(word_rand_folder))
         #Perform random transformations, save in data/transfromed_words
-        generated_image_name = str(i) + "_" + str(word_count) + "_" + word_image_name;
+        generated_image_name = str(output_index) + "_" + str(word_count) + "_" + word_image_name
         from word_transform import get_random_img_transform
         #Randomize transform parameters
         rand_h_shear_dg = random.random()*word_horizontal_shear_scale
@@ -250,7 +253,7 @@ for i in range(output_num):
         #<save ref="my-copy" file="outputs    ext_insertion_test1.png"/>
     save_e = etree.SubElement(root, "save")
     save_e.set("ref", "my-copy")
-    save_e.set("file", "data/outputs/degraded_"+str(i)+"_"+bg_image_name)
+    save_e.set("file", "data/outputs/degraded_"+str(output_index)+"_"+bg_image_name)
     
 output_xml = open("data_generator_script.xml", 'w')
 output_xml.write(etree.tostring(root, pretty_print=True).decode("utf-8"))

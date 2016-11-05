@@ -60,3 +60,19 @@ References:
     Since the raw images created by command 
     "java -jar DivaDid.jar match_generator_script.xml"
     are not black & white. All the ground truth files are in "data/ground_truths"
+    
+Example:
+    To generate 5 synthesized images with stain level = 1 and text noisiness 
+    level = 1, run:
+        
+        python script_generator.py
+        
+        java -jar DivaDid.jar data_generator_script.xml
+        
+    To generate the corresponding ground-truth
+    
+        java -jar DivaDid.jar match_generator_script.xml
+        
+        python ground_truth_binarization_script.py
+        
+    Repeat the process to generate more images with different parameters.
