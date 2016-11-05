@@ -65,7 +65,7 @@ Example:
     To generate 5 synthesized images with stain level = 1 and text noisiness 
     level = 1, run:
         
-        python script_generator.py
+        python script_generator.py 5 1 1
         
         java -jar DivaDid.jar data_generator_script.xml
         
